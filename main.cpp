@@ -54,9 +54,6 @@ void commandLineOptions(int argc, char** argv){
       case 'a':
         bound = givenBound;
         break;
-      case 'v':
-        verbose = true;
-        break;
       case 'h':
       default:
         fprintf (stderr, "Usage: %s -f -o -a -h\n", argv[0]);
@@ -70,6 +67,7 @@ void readInput(){
   actors = vector<Actor>(m + 1);
   selection = vector<int>(m + 1, 1);
   optSelection = vector<int>(m + 1, 0);
+  optSum = inf;
 
   for(int i = 1; i <= m; i++){
     int v, s;

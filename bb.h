@@ -25,12 +25,11 @@ inline vector<int> groups;
 inline vector<Actor> actors;
 inline vector<int> selection;
 inline vector<int> optSelection;
-inline int optSum = inf;
+inline int optSum;
 
 inline bool defaultBound = true;
 inline bool viabilityCut = true;
 inline bool otimalityCut = true;
-inline bool verbose = false;
 
 inline long nodeCount = 0;
 inline long otimalityCutCount = 0;

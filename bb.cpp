@@ -80,6 +80,7 @@ int greedyBound(vector<int>& selection, unsigned int i){
 }
 
 void BT(int i, int count){
+  // cout << "BT(" << i << ", " << count << ")\n";
   nodeCount++; 
 
   // leaf
@@ -118,7 +119,7 @@ void BT(int i, int count){
               viabilityCutCount++;
           }
           else BT(i + 1, count - 1);
-          
+          selection[i] = 1;
         } 
         else {
           if(viabilityCut){
